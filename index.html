@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <section class="sec">
+        <header>
+            <a href="#"> <img src="logo.png" alt="logo" class="logo"></a>
+            <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">What's New</a></li>
+            <li><a href="#">Newsletter</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>That's What<br><span>I like</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus illo provident dolorum esse dignissimos iste minima rem quis fugit corrupti nesciunt voluptate, aliquam eum est id itaque ipsam. Illum, ut.
+                </p>
+                <a href="#">View all products</a>
+            </div>
+            <div class="imgBox">
+                <img src="m1_2.png" alt="monster" class="monster">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="m1_2.png" onclick="imgSlider('m1_2.png');chanceBgColor('#000');logoSlider('logo.png')" alt=""></li>
+            <li><img src="m2_2.png" onclick="imgSlider('m2_2.png');chanceBgColor('#1b4d5d');logoSlider('logo_2.png')" alt=""></li>
+            <li><img src="m3_3.png" onclick="imgSlider('m3_3.png');chanceBgColor('#a02937');logoSlider('logo_3.png')" alt=""></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="facebook.png" alt=""></a></li>
+            <li><a href="#"><img src="instagram.png" alt=""></a></li>
+            <li><a href="#"><img src="twitter.png" alt=""></a></li>
+        </ul>
+    </section>
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.monster').src = anything;
+        }
+        function logoSlider(logoMonster){
+            document.querySelector('.logo').src = logoMonster;
+        }
+        function chanceBgColor(color){
+            const sec = document.querySelector('.sec');
+            sec.style.background = color;
+        }
+    </script>
+</body>
+</html>
